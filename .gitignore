@@ -1,0 +1,5 @@
+__pycache__/
+*.pyc
+extension/config.json
+build/stage/
+PyDM-Setup.exe

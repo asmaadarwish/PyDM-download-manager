@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <header>
+    <img src="icons/48.png" alt="" width="28" height="28">
+    <div><b>PyDM</b><span id="state"></span></div>
+  </header>
+  <p class="page" id="pageTitle" dir="auto"></p>
+  <button class="big" id="grabPage" type="button"></button>
+  <label class="catch"><input type="checkbox" id="autoCatch"><span class="track"></span><span id="catchLabel"></span></label>
+  <section id="found" hidden>
+    <h2 id="foundTitle"></h2>
+    <ul id="items"></ul>
+  </section>
+  <p class="none" id="none" hidden></p>
+  <footer><button id="open" type="button" class="link"></button></footer>
+  <div class="toast" id="toast" hidden></div>
+<script src="popup.js"></script>
+</body>
+</html>

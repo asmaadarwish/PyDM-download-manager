@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>PyDM</title>
+<link rel="icon" href="logo.svg" type="image/svg+xml">
+<link rel="stylesheet" href="fonts.css">
+<link rel="stylesheet" href="style.css">
+<script>window.PYDM = { token: "__PYDM_TOKEN__", version: "__PYDM_VERSION__" };</script>
+</head>
+<body>
+<div class="app">
+
+  <header class="bar">
+    <div class="brand"><img src="logo.svg" alt="" width="30" height="30"><span class="word">PyDM</span></div>
+    <div class="bar-end">
+      <div class="speed" id="speed" hidden>
+        <svg id="spark" viewBox="0 0 72 22" width="72" height="22" aria-hidden="true"><polyline points=""/></svg>
+        <span id="speedText" dir="ltr"></span>
+      </div>
+      <button class="icon-btn" id="langBtn" type="button"></button>
+      <button class="icon-btn" id="themeBtn" type="button"></button>
+      <button class="icon-btn" id="settingsBtn" type="button"></button>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <form class="paste" id="pasteForm" autocomplete="off">
+      <span class="paste-ico" data-icon="link" aria-hidden="true"></span>
+      <input id="linkInput" type="text" inputmode="url" spellcheck="false" dir="auto">
+      <select id="qualitySel" class="select"></select>
+      <button class="btn-primary" id="goBtn" type="submit"><span data-icon="download" aria-hidden="true"></span><span id="goLabel"></span></button>
+    </form>
+    <div class="paste-sub">
+      <p id="pasteHint"></p>
+      <label class="switch"><input type="checkbox" id="startNow" checked><span class="track" aria-hidden="true"></span><span id="startNowLabel"></span></label>
+    </div>
+
+    <div class="toolbar">
+      <div class="seg" id="filters" role="tablist"></div>
+      <div class="tools">
+        <span class="chip" id="schedChip" hidden></span>
+        <button class="btn-ghost" id="queueBtn" type="button"></button>
+        <button class="btn-ghost" id="schedBtn" type="button"></button>
+        <button class="btn-ghost" id="clearBtn" type="button"></button>
+      </div>
+    </div>
+
+    <section class="list" id="list" aria-live="polite"></section>
+
+    <section class="empty" id="empty" hidden>
+      <div class="empty-ring" data-icon="download" aria-hidden="true"></div>
+      <h2 id="emptyTitle"></h2>
+      <p id="emptyBody"></p>
+      <div class="empty-actions">
+        <button class="btn-primary soft" id="emptyExt" type="button"><span data-icon="plug" aria-hidden="true"></span><span id="emptyExtLabel"></span></button>
+        <button class="btn-ghost" id="emptyFolder" type="button"></button>
+      </div>
+    </section>
+  </main>
+
+  <div class="credit"><a id="credit" href="http://asmaadarwish.com/" target="_blank" rel="noopener">Created by Asmaa Darwish - Content Me</a></div>
+  <div class="toasts" id="toasts" aria-live="polite"></div>
+  <div class="dropveil" id="dropveil" aria-hidden="true"><div id="dropText"></div></div>
+</div>
+
+<dialog id="settingsDlg" class="dlg">
+  <form method="dialog" class="dlg-head"><h2 id="setTitle"></h2><button class="icon-btn" id="setClose" aria-label="Close" data-icon="x"></button></form>
+  <div class="dlg-body" id="setBody"></div>
+</dialog>
+
+<dialog id="schedDlg" class="dlg small">
+  <form method="dialog" class="dlg-head"><h2 id="schedTitle"></h2><button class="icon-btn" aria-label="Close" data-icon="x"></button></form>
+  <div class="dlg-body">
+    <p class="muted" id="schedBody"></p>
+    <input type="time" id="schedTime" class="field" value="02:00">
+    <div class="dlg-actions">
+      <button class="btn-ghost" id="schedCancel" type="button"></button>
+      <button class="btn-primary compact" id="schedSet" type="button"></button>
+    </div>
+  </div>
+</dialog>
+
+<dialog id="extDlg" class="dlg">
+  <form method="dialog" class="dlg-head"><h2 id="extTitle"></h2><button class="icon-btn" aria-label="Close" data-icon="x"></button></form>
+  <div class="dlg-body" id="extBody"></div>
+</dialog>
+
+<script src="app.js"></script>
+</body>
+</html>
