@@ -9,7 +9,7 @@ import sys
 import urllib.request
 
 VERSION = "3.5.0"
-REPO = "Asmaaeldarwishy/PyDM-download-manager"
+REPO = "asmaadarwish/PyDM-download-manager"
 STATUS_URL = os.environ.get("PYDM_STATUS_URL") or f"https://raw.githubusercontent.com/{REPO}/main/status.json"
 RELEASES_URL = f"https://github.com/{REPO}/releases/latest"
 HERE = os.path.dirname(os.path.abspath(__file__))

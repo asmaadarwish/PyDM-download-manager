@@ -6,7 +6,7 @@ a browser extension that catches files and videos, and video download from web p
 Created by Asmaa Darwish - Content Me (http://asmaadarwish.com/)
 
 ## Install
-Download **PyDM-Setup.exe** from [Releases](https://github.com/Asmaaeldarwishy/PyDM-download-manager/releases/latest) and run it.
+Download **PyDM-Setup.exe** from [Releases](https://github.com/asmaadarwish/PyDM-download-manager/releases/latest) and run it.
 Windows SmartScreen may warn because the installer is not code-signed: choose *More info → Run anyway*.
 
 ## Updates and privacy
